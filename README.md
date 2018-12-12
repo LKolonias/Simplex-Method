@@ -1,4 +1,4 @@
-# Simplex Algorithm
+# Simplex Algorithm in MATLAB
 
 Implementation of Simplex algorithm with Lexicographical minimum ratio test and Intiger pivoting for minimization. Solves linear problems of the form LP>= <br><br>
 
@@ -6,7 +6,7 @@ Implementation of Simplex algorithm with Lexicographical minimum ratio test and 
   A: m x n matrix of inequalities (>=)<br>
   a: m x 1 right hand side<br>
   c: optimization function<br>
-<br><br>
+<br>
 
 <b>Outputs:</b><br>
   x: best feasible solution<br>
