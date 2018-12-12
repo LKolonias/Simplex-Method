@@ -13,12 +13,12 @@ Implementation of Simplex algorithm with Lexicographical minimum ratio test and 
   y: solution of the dual problem
 
 
-#Additional functions
+# Additional functions
 
 <b>lp_inequalities:</b> converts a LPG problem in a LP problem with inequalities<br>
 <b>lp_equalities:</b> converts a LPG problem in a LP problem with equalities<br>
 
-#Branch & Bound
+# Branch & Bound
 
 Implementation of the Branch & Bound algorithm for Integer Linear Programming.
 
