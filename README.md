@@ -12,6 +12,8 @@ Implementation of Simplex algorithm with Lexicographical minimum ratio test and 
   cx: cost of the solution due to c<br>
   y: solution of the dual problem
 
+***
+
 # Branch & Bound
 
 Implementation of the Branch & Bound algorithm for Integer Linear Programming.
@@ -24,6 +26,8 @@ Implementation of the Branch & Bound algorithm for Integer Linear Programming.
 <b>Outputs:</b><br>
   x: best integer solution
   cx: cost of the integer solution due to c
+
+***
 
 # Additional functions
 
