@@ -44,7 +44,7 @@ PrevPivot = -1;
 while min(T(m,1:(n-1)))<0
     % Find column of pivot element
     s = T(m,1:(n-1));
-    [el, col] = min(s);
+    [~, col] = min(s);
     
     % Find row of pivot element
     [~,srt] = LexMinRatio(T,col,1);
@@ -81,7 +81,7 @@ while min(T(m,1:(n-1)))<0
 
     s = T(m,1:(n-1));
     s(s>0)=min(s)-1; s(s==0)=min(s)-1;
-    [el, col] = max(s);
+    [~, col] = max(s);
     [~,srt] = LexMinRatio(T,col,2);
     
     % Check if Linear Problem is not bounded
@@ -89,7 +89,7 @@ while min(T(m,1:(n-1)))<0
         x = []; cx = []; y = [];
         return;   
     end
-    
+
     CurPivot = T(srt(1),col);
     I(srt(1)) = col;
     for i=1:m
@@ -101,12 +101,15 @@ while min(T(m,1:(n-1)))<0
 end
 
 I = sort(I);
-d = -T(find(T(:,I(1))),I(1))
+d = -T(find(T(:,I(1))),I(1));
 
 % Return minimum cost solution vector
 [m2, n2] = size(A);
+x = zeros(n2,1);
 for i =1:n2
-    x(i,1) = T(find(T(:,I(i))),n)/d;
+    if(I(i)<=n2)
+        x(I(i),1) = T(find(T(:,I(i))),n)/d;
+    end
 end
 
 % Return cost of the solution
