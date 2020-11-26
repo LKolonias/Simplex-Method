@@ -106,7 +106,7 @@ d = -T(find(T(:,I(1))),I(1));
 % Return minimum cost solution vector
 [m2, n2] = size(A);
 x = zeros(n2,1);
-for i =1:n2
+for i =1:length(I)
     if(I(i)<=n2)
         x(I(i),1) = T(find(T(:,I(i))),n)/d;
     end
